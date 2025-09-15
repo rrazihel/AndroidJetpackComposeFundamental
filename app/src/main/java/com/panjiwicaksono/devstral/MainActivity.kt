@@ -6,11 +6,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.gestures.snapping.SnapPosition
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -24,6 +27,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -134,6 +140,8 @@ fun JetpackCompose(modifier: Modifier = Modifier){
     val h2 = stringResource(R.string.isi_1)
     val h3 = stringResource(R.string.isi_1)
 
+// Latihan Maghrib !!
+
     Column { 
         Image(
             painter = image,
@@ -168,6 +176,37 @@ fun JetpackCompose(modifier: Modifier = Modifier){
                 ),
 
             textAlign = TextAlign.Justify
+        )
+    }
+}
+
+
+// Task Complete
+
+@Preview(showSystemUi = true)
+@Composable
+fun CompleteTask(modifier: Modifier = Modifier){
+    val image = painterResource(R.drawable.ic_task_completed)
+    val h1 = stringResource(R.string.task_completed)
+    val h2 = stringResource(R.string.nice_work)
+    Column(
+        modifier.fillMaxHeight().fillMaxWidth(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ){
+        Image(
+            painter = image,
+            null,
+        )
+        Text(
+            text = stringResource(R.string.task_completed),
+            modifier = modifier.padding(top = 24.dp, bottom = 8.dp),
+            fontWeight = FontWeight.Bold
+
+        )
+        Text(
+            text = stringResource(R.string.nice_work),
+            fontSize = 16.sp
         )
     }
 }
