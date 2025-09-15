@@ -7,4 +7,7 @@
     <string name="isi_2">In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name.</string>
     <string name="task_completed">Semua tugas selesai</string>
     <string name="nice_work">Kerja bagus!</string>
+    <string name="header_linux">Mengenal Linux: Sang Revolusi Sumber Terbuka</string>
+    <string name="paragraf1_linux">Linux adalah sebuah kernel (inti) dari sistem operasi yang diciptakan oleh Linus Torvalds. Berbeda dengan sistem operasi komersial, Linux bersifat sumber terbuka (open-source), di mana kode sumbernya bisa dilihat, dimodifikasi, dan didistribusikan secara bebas.</string>
+    <string name="paragraf2_linux">Meskipun tidak sepopuler Windows atau macOS di desktop, Linux menjadi tulang punggung internet, komputasi awan (cloud), dan perangkat pintar (seperti Android). Linux membuktikan bahwa kolaborasi global dapat menciptakan teknologi yang powerful dan bebas diakses oleh siapa saja.</string>
 </resources>

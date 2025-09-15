@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.snapping.SnapPosition
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,6 +24,7 @@ import androidx.compose.material3.VerticalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
@@ -46,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ){
-                    GreetingText(message = "Selamat Ulang Tahun Cihuyy", from = " From Panjuy")
+                    Artikel()
                 }
             }
         }
@@ -209,4 +211,48 @@ fun CompleteTask(modifier: Modifier = Modifier){
             fontSize = 16.sp
         )
     }
+}
+
+
+// Artikel Part 2
+@Preview(
+    showSystemUi = true
+)
+@Composable
+fun Artikel(modifier: Modifier = Modifier){
+    val image = painterResource(R.drawable.linux)
+    val header = stringResource(R.string.header_linux)
+    val paragraf1 = stringResource(R.string.paragraf1_linux)
+    val paragraf2 = stringResource(R.string.paragraf2_linux)
+    Box(
+        modifier.background(Color.Black).fillMaxSize()
+    )
+    Column {
+        Image(
+            painter = image,
+            contentDescription = null,
+            modifier = modifier.padding(top = 40.dp)
+        )
+        Text(
+            text = header,
+            color = Color.White,
+            fontSize = 24.sp,
+            modifier = modifier.padding(24.dp)
+        )
+        Text(
+            text = paragraf1,
+            color = Color.White,
+            fontSize = 20.sp,
+            modifier = modifier.padding(24.dp),
+            textAlign = TextAlign.Justify
+        )
+        Text(
+            text = paragraf2,
+            color = Color.White,
+            fontSize = 20.sp,
+            modifier = modifier.padding(24.dp),
+            textAlign = TextAlign.Justify
+        )
+    }
+
 }
