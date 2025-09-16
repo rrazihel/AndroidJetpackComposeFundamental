@@ -10,4 +10,12 @@
     <string name="header_linux">Mengenal Linux: Sang Revolusi Sumber Terbuka</string>
     <string name="paragraf1_linux">Linux adalah sebuah kernel (inti) dari sistem operasi yang diciptakan oleh Linus Torvalds. Berbeda dengan sistem operasi komersial, Linux bersifat sumber terbuka (open-source), di mana kode sumbernya bisa dilihat, dimodifikasi, dan didistribusikan secara bebas.</string>
     <string name="paragraf2_linux">Meskipun tidak sepopuler Windows atau macOS di desktop, Linux menjadi tulang punggung internet, komputasi awan (cloud), dan perangkat pintar (seperti Android). Linux membuktikan bahwa kolaborasi global dapat menciptakan teknologi yang powerful dan bebas diakses oleh siapa saja.</string>
+    <string name="text_composable">Text composable</string>
+    <string name="text_in">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="image_composable">Image composable</string>
+    <string name="image_in">Creates a composable that lays out and draws a given Painter class object.</string>
+    <string name="row_composable">Row composable</string>
+    <string name="row_in">A layout composable that places its children in a horizontal sequence.</string>
+    <string name="column_composable">Column composable</string>
+    <string name="column_in">A layout composable that places its children in a vertical sequence.</string>
 </resources>

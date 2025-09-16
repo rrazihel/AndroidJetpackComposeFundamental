@@ -48,7 +48,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ){
-                    Artikel()
+                    ComposeQuadrantApp()
                 }
             }
         }
@@ -108,11 +108,7 @@ fun JetpackComposeTutorial(images: String, text: String, modifier: Modifier = Mo
 }
 
 
-@Preview(
-    showBackground = true,
-   // name = "Panji Wicaksono",
-   // showSystemUi = true
-)
+// @Preview(showBackground = true,)
 
 @Composable
 fun GreetingPreview() {
@@ -123,7 +119,7 @@ fun GreetingPreview() {
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingImagePreview() {
     JuggernautTheme {
@@ -134,7 +130,7 @@ fun GreetingImagePreview() {
     }
 }
 
-@Preview(showSystemUi = true)
+//@Preview(showSystemUi = true)
 @Composable
 fun JetpackCompose(modifier: Modifier = Modifier){
     val image = painterResource(R.drawable.bg_compose_background)
@@ -185,7 +181,7 @@ fun JetpackCompose(modifier: Modifier = Modifier){
 
 // Task Complete
 
-@Preview(showSystemUi = true)
+//@Preview(showSystemUi = true)
 @Composable
 fun CompleteTask(modifier: Modifier = Modifier){
     val image = painterResource(R.drawable.ic_task_completed)
@@ -215,9 +211,7 @@ fun CompleteTask(modifier: Modifier = Modifier){
 
 
 // Artikel Part 2
-@Preview(
-    showSystemUi = true
-)
+//@Preview(showSystemUi = true)
 @Composable
 fun Artikel(modifier: Modifier = Modifier){
     val image = painterResource(R.drawable.linux)
@@ -255,4 +249,69 @@ fun Artikel(modifier: Modifier = Modifier){
         )
     }
 
+}
+
+//Compos Card
+
+@Composable
+fun ComposeQuadrantApp() {
+    Column(Modifier.fillMaxWidth()) {
+        Row(Modifier.weight(1f)) {
+            ComposableInfoCard(
+                title = stringResource(R.string.text_composable),
+                description = stringResource(R.string.text_in),
+                backgroundColor = Color(0xFFEADDFF),
+                modifier = Modifier.weight(1f)
+            )
+            ComposableInfoCard(
+                title = stringResource(R.string.image_composable),
+                description = stringResource(R.string.image_in),
+                backgroundColor = Color(0xFFD0BCFF),
+                modifier = Modifier.weight(1f)
+            )
+        }
+        Row(Modifier.weight(1f)) {
+            ComposableInfoCard(
+                title = stringResource(R.string.row_composable),
+                description = stringResource(R.string.row_in),
+                backgroundColor = Color(0xFFB69DF8),
+                modifier = Modifier.weight(1f)
+            )
+            ComposableInfoCard(
+                title = stringResource(R.string.column_composable),
+                description = stringResource(R.string.column_in),
+                backgroundColor = Color(0xFFF6EDFF),
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+@Composable
+private fun ComposableInfoCard(
+    title: String,
+    description: String,
+    backgroundColor: Color,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = title,
+            modifier = Modifier.padding(bottom = 16.dp),
+            fontWeight = FontWeight.Bold,
+            color = Color.Black
+        )
+        Text(
+            text = description,
+            textAlign = TextAlign.Justify,
+            color = Color.Black
+        )
+    }
 }
